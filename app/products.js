@@ -14,6 +14,7 @@
 var buttons = document.getElementsByClassName('button');
 var visualSpacer = "-----";
 var total = 0;
+var comma = true;
 
 var products = {
   
@@ -123,80 +124,98 @@ document.onreadystatechange = function() {
 //
 function ButtonStuff() {
   var buttonLabel = this.innerHTML;
-
+  
 
   if (this.classList.contains('chocolate')) {
+      
+      document.getElementById("display").innerHTML +=
+          "1 scoop of Chocolate";
+      document.getElementById("total").innerHTML +=
+          "$2.00"; 
+      total += 2;
+      
+
+          }
+
+    else if(this.classList.contains('vanilla')){
+      document.getElementById("display").innerHTML +=
+          "1 scoop of Vanilla";
+      document.getElementById("total").innerHTML +=
+          "$2.00"; 
+      total += 2;
+     
+          }
+    else if(this.classList.contains('strawberry')){
+      document.getElementById("display").innerHTML +=
+          "1 scoop of Strawberry";
+      document.getElementById("total").innerHTML +=
+          "$2.00"; 
+      total += 2;
+      
+
+          }
+
+    else if(this.classList.contains('salted-caramel')){
+      document.getElementById("display").innerHTML +=
+          "1 scoop of Salted Caramel";
+      document.getElementById("total").innerHTML +=
+          "$3.00";
+      total += 3; 
+      
+
+          }
+
+     else if(this.classList.contains('pumpkin-spice')){
+      document.getElementById("display").innerHTML +=
+          "Pumpkin Spice";
+      document.getElementById("total").innerHTML +=
+          "1 scoop of $3.00"; 
+      total += 3;
+      
+
+          }
+
+      else if(this.classList.contains('waffle-cone')){
+      document.getElementById("display").innerHTML +=
+          "in a Waffle Cone";
+      document.getElementById("total").innerHTML +=
+          "$1.25";
+      total += 1.25; 
+      
+
+          }
+      else if(this.classList.contains('hot-fudge')){
+      document.getElementById("display").innerHTML +=
+          "topped with Hot Fudge";
+      document.getElementById("total").innerHTML +=
+          "$1.00";
+      total += 1; 
+      
+
+          }
+      else if(this.classList.contains('marshmellows')){
+      document.getElementById("display").innerHTML +=
+          "add some Marshmellows";
+      document.getElementById("total").innerHTML +=
+          "$1.50";
+      total += 1.5; 
+      
+
+          }
+      else if(this.classList.contains('rainbow-sprinkles')){
+      document.getElementById("display").innerHTML +=
+          "add some Rainbow Sprinkles";
+      document.getElementById("total").innerHTML +=
+          "$0.75";
+      total += 0.75; 
+      
+
+          }
+
+      else if(this.classList.contains('checkout')){
+        calculate();
+      }
     
-    document.getElementById("display").innerHTML +=
-        "Chocolate";
-    document.getElementById("total").innerHTML +=
-        "$2.00"; 
-    total += 2;
-        }
-
-  else if(this.classList.contains('vanilla')){
-    document.getElementById("display").innerHTML +=
-        "Vanilla";
-    document.getElementById("total").innerHTML +=
-        "$2.00"; 
-    total += 2;
-        }
-  else if(this.classList.contains('strawberry')){
-    document.getElementById("display").innerHTML +=
-        "Strawberry";
-    document.getElementById("total").innerHTML +=
-        "$2.00"; 
-    total += 2;
-        }
-
-  else if(this.classList.contains('salted-caramel')){
-    document.getElementById("display").innerHTML +=
-        "Salted Caramel";
-    document.getElementById("total").innerHTML +=
-        "$3.00";
-    total += 3; 
-        }
-
-   else if(this.classList.contains('pumpkin-spice')){
-    document.getElementById("display").innerHTML +=
-        "Pumpkin Spice";
-    document.getElementById("total").innerHTML +=
-        "$3.00"; 
-    total += 3;
-        }
-
-    else if(this.classList.contains('waffle-cone')){
-    document.getElementById("display").innerHTML +=
-        "Waffle Cone";
-    document.getElementById("total").innerHTML +=
-        "$1.25";
-    total += 1.25; 
-        }
-    else if(this.classList.contains('hot-fudge')){
-    document.getElementById("display").innerHTML +=
-        "Hot Fudge";
-    document.getElementById("total").innerHTML +=
-        "$1.00";
-    total += 1; 
-        }
-    else if(this.classList.contains('marshmellows')){
-    document.getElementById("display").innerHTML +=
-        "Marshmellows";
-    document.getElementById("total").innerHTML +=
-        "$1.50";
-    total += 1.5; 
-        }
-    else if(this.classList.contains('rainbow-sprinkles')){
-    document.getElementById("display").innerHTML +=
-        "Rainbow Sprinkles";
-    document.getElementById("total").innerHTML +=
-        "$0.75";
-    total += 0.75; 
-        }
-
-    else if(this.classList.contains('checkout')){
-      calculate();
-    }
 }
 
 
@@ -209,7 +228,8 @@ function calculate(){
 
 
 function buildMenuRegular(){
-
+// this function prints out the three regular flavors with their corresponding description and price
+// there are three regular flavors (chocolate, vanilla and strawberry)
 for(var i=0; i<3; i++){
 
  document.getElementById("regular-flavor").innerHTML += 
@@ -217,6 +237,7 @@ for(var i=0; i<3; i++){
  " " + (products['Regular Flavors'][i]['description']) + 
  " $" + (products['Regular Flavors'][i]['price']);
   
+  // help with readability 
   if((i+1)<3){
       document.getElementById("regular-flavor").innerHTML += visualSpacer;
       } 
