@@ -12,6 +12,8 @@
 // var regularFlavorNames = document.getElementById('regular-flavor-names');
 // var regularFlavorDescription = document.getElementById('regular-flavor-description');
 
+var visualSpacer = "*****";
+
 
 var products = {
   
@@ -96,87 +98,160 @@ var products = {
 
 // Regular Flavors
 
-// loop attempt
+document.onreadystatechange = function() {
+  if (document.readyState === "interactive") {
+    buildMenuRegular();
+    buildMenuSeasonal();
+    buildMenuToppings();
+    buildMenuServingOptions();
+    };
+
+function buildMenuRegular(){
+
 for(var i=0; i<3; i++){
-document.getElementById("regular-flavor-names").innerHTML += (products['Regular Flavors'][i]['name']) + " ";
-}
 
-// loop attempt
+ document.getElementById("regular-flavor").innerHTML += 
+ (products['Regular Flavors'][i]['name']) + 
+ " " + (products['Regular Flavors'][i]['description']) + 
+ " " + (products['Regular Flavors'][i]['price']);
+  console.log("at line 115 i =" + i);
+   console.log("visual spacer is =" + visualSpacer);
+  if((i+1)<3){
+      document.getElementById("regular-flavor").innerHTML += visualSpacer;
+      } 
+   }
+  }
+
+
+
+function buildMenuSeasonal(){
+
+for(var i=0; i<2; i++){
+
+ document.getElementById("seasonal-flavor").innerHTML += 
+ (products['Seasonal Flavors'][i]['name']) + 
+ " " + (products['Seasonal Flavors'][i]['description']) + 
+ " " + (products['Seasonal Flavors'][i]['price']);
+  if((i+1)<2){
+    document.getElementById("seasonal-flavor").innerHTML += visualSpacer;
+    } 
+   }
+  }
+
+
+function buildMenuToppings(){
+
 for(var i=0; i<3; i++){
-document.getElementById("regular-flavor-description").innerHTML += (products['Regular Flavors'][i]['description']) + " ";
+
+ document.getElementById("toppings").innerHTML += 
+ (products['Toppings'][i]['name']) + 
+ " " + (products['Toppings'][i]['description']) + 
+ " " + (products['Toppings'][i]['price']) +
+ " //// ";
+
+    }
+  }
+
+
+function buildMenuServingOptions(){
+
+for(var i=0; i<2; i++){
+
+ document.getElementById("serving-options").innerHTML += 
+ (products['Serving Options'][i]['name']) + 
+ " " + (products['Serving Options'][i]['description']) + 
+ " " + (products['Serving Options'][i]['price']) +
+ " //// ";
+
+    }
+  }
+
 }
+// // loop attempt
+// for(var i=0; i<3; i++){
+// document.getElementById("regular-flavor-names").innerHTML += (products['Regular Flavors'][i]['name']) + " ";
+// }
 
-// loop attempt
-for(var i=0; i<3; i++){
-document.getElementById("regular-flavor-price").innerHTML += (products['Regular Flavors'][i]['price']) + " ";
-}
+// // loop attempt
+// for(var i=0; i<3; i++){
+// document.getElementById("regular-flavor-description").innerHTML += (products['Regular Flavors'][i]['description']) + " ";
+// }
 
-
-
-
-// Chocolate
-document.getElementById("chocolate").innerHTML += (products['Regular Flavors'][0]['name']) + " ";
-document.getElementById("chocolate").innerHTML += (products['Regular Flavors'][0]['description']) + " $";
-document.getElementById("chocolate").innerHTML +=  products['Regular Flavors'][0]['price'];
-
-
-
-
-// Vanilla
-document.getElementById("vanilla").innerHTML += (products['Regular Flavors'][1]['name']) + " ";
-document.getElementById("vanilla").innerHTML += (products['Regular Flavors'][1]['description']) + " $";
-document.getElementById("vanilla").innerHTML +=  products['Regular Flavors'][1]['price'];
-
-
-// Strawberry
-document.getElementById("strawberry").innerHTML += (products['Regular Flavors'][2]['name']) + " ";
-document.getElementById("strawberry").innerHTML += (products['Regular Flavors'][2]['description']) + " $";
-document.getElementById("strawberry").innerHTML +=  products['Regular Flavors'][2]['price'];
-
-
-// Seasonal Flavors
-
-// Salted Caramel
-document.getElementById("salted-caramel").innerHTML += (products['Seasonal Flavors'][0]['name']) + " ";
-document.getElementById("salted-caramel").innerHTML += (products['Seasonal Flavors'][0]['description']) + " $";
-document.getElementById("salted-caramel").innerHTML +=  products['Seasonal Flavors'][0]['price'];
-
-// Pumpkin Spice
-document.getElementById("pumpkin-spice").innerHTML += (products['Seasonal Flavors'][1]['name']) + " ";
-document.getElementById("pumpkin-spice").innerHTML += (products['Seasonal Flavors'][1]['description']) + " $";
-document.getElementById("pumpkin-spice").innerHTML +=  products['Seasonal Flavors'][1]['price'];
-
-
-// Serving Options
-
-// Cup
-document.getElementById("cup").innerHTML += (products['Serving Options'][0]['name']) + " ";
-document.getElementById("cup").innerHTML += (products['Serving Options'][0]['description']) + " $";
-document.getElementById("cup").innerHTML +=  products['Serving Options'][0]['price'];
-
-// Cone
-document.getElementById("cone").innerHTML += (products['Serving Options'][1]['name']) + " ";
-document.getElementById("cone").innerHTML += (products['Serving Options'][1]['description']) + " $";
-document.getElementById("cone").innerHTML +=  products['Serving Options'][1]['price'];
+// // loop attempt
+// for(var i=0; i<3; i++){
+// document.getElementById("regular-flavor-price").innerHTML += (products['Regular Flavors'][i]['price']) + " ";
+// }
 
 
 
-// Toppings
 
-// Hot Fudge
-document.getElementById("hot-fudge").innerHTML += (products['Toppings'][0]['name']) + " ";
-document.getElementById("hot-fudge").innerHTML += (products['Toppings'][0]['description']) + " $";
-document.getElementById("hot-fudge").innerHTML +=  products['Toppings'][0]['price'];
 
-// Marshmellows
-document.getElementById("marshmellows").innerHTML += (products['Toppings'][1]['name']) + " ";
-document.getElementById("marshmellows").innerHTML += (products['Toppings'][1]['description']) + " $";
-document.getElementById("marshmellows").innerHTML +=  products['Toppings'][1]['price'];
 
-// Rainbow Sprinkles
-document.getElementById("rainbow-sprinkles").innerHTML += (products['Toppings'][2]['name']) + " ";
-document.getElementById("rainbow-sprinkles").innerHTML += (products['Toppings'][2]['description']) + " $";
-document.getElementById("rainbow-sprinkles").innerHTML +=  products['Toppings'][2]['price'];
+
+
+// // Chocolate
+// document.getElementById("chocolate").innerHTML += (products['Regular Flavors'][0]['name']) + " ";
+// document.getElementById("chocolate").innerHTML += (products['Regular Flavors'][0]['description']) + " $";
+// document.getElementById("chocolate").innerHTML +=  products['Regular Flavors'][0]['price'];
+
+
+
+
+// // Vanilla
+// document.getElementById("vanilla").innerHTML += (products['Regular Flavors'][1]['name']) + " ";
+// document.getElementById("vanilla").innerHTML += (products['Regular Flavors'][1]['description']) + " $";
+// document.getElementById("vanilla").innerHTML +=  products['Regular Flavors'][1]['price'];
+
+
+// // Strawberry
+// document.getElementById("strawberry").innerHTML += (products['Regular Flavors'][2]['name']) + " ";
+// document.getElementById("strawberry").innerHTML += (products['Regular Flavors'][2]['description']) + " $";
+// document.getElementById("strawberry").innerHTML +=  products['Regular Flavors'][2]['price'];
+
+
+// // Seasonal Flavors
+
+// // Salted Caramel
+// document.getElementById("salted-caramel").innerHTML += (products['Seasonal Flavors'][0]['name']) + " ";
+// document.getElementById("salted-caramel").innerHTML += (products['Seasonal Flavors'][0]['description']) + " $";
+// document.getElementById("salted-caramel").innerHTML +=  products['Seasonal Flavors'][0]['price'];
+
+// // Pumpkin Spice
+// document.getElementById("pumpkin-spice").innerHTML += (products['Seasonal Flavors'][1]['name']) + " ";
+// document.getElementById("pumpkin-spice").innerHTML += (products['Seasonal Flavors'][1]['description']) + " $";
+// document.getElementById("pumpkin-spice").innerHTML +=  products['Seasonal Flavors'][1]['price'];
+
+
+// // Serving Options
+
+// // Cup
+// document.getElementById("cup").innerHTML += (products['Serving Options'][0]['name']) + " ";
+// document.getElementById("cup").innerHTML += (products['Serving Options'][0]['description']) + " $";
+// document.getElementById("cup").innerHTML +=  products['Serving Options'][0]['price'];
+
+// // Cone
+// document.getElementById("cone").innerHTML += (products['Serving Options'][1]['name']) + " ";
+// document.getElementById("cone").innerHTML += (products['Serving Options'][1]['description']) + " $";
+// document.getElementById("cone").innerHTML +=  products['Serving Options'][1]['price'];
+
+
+
+// // Toppings
+
+// // Hot Fudge
+// document.getElementById("hot-fudge").innerHTML += (products['Toppings'][0]['name']) + " ";
+// document.getElementById("hot-fudge").innerHTML += (products['Toppings'][0]['description']) + " $";
+// document.getElementById("hot-fudge").innerHTML +=  products['Toppings'][0]['price'];
+
+// // Marshmellows
+// document.getElementById("marshmellows").innerHTML += (products['Toppings'][1]['name']) + " ";
+// document.getElementById("marshmellows").innerHTML += (products['Toppings'][1]['description']) + " $";
+// document.getElementById("marshmellows").innerHTML +=  products['Toppings'][1]['price'];
+
+// // Rainbow Sprinkles
+// document.getElementById("rainbow-sprinkles").innerHTML += (products['Toppings'][2]['name']) + " ";
+// document.getElementById("rainbow-sprinkles").innerHTML += (products['Toppings'][2]['description']) + " $";
+// document.getElementById("rainbow-sprinkles").innerHTML +=  products['Toppings'][2]['price'];
 
 
 

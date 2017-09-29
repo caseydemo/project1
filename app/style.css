@@ -1,11 +1,14 @@
 body{
 	background:#9DC8C8;
+	font-family: 'Acme', sans-serif;
 }
 
 h1, h2 {
 	text-align: center;
 	padding-top: 20px;
+	font-family: 'Acme', sans-serif;
 }
 .menu-item{
 	text-align: center;
+	font-family: 'Acme', sans-serif;
 }
