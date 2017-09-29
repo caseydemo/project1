@@ -26,3 +26,11 @@ h1, h2 {
 	font-size: large;
 	text-align: center;
 }
+.checkout{
+	#total, #checkout{
+	font-family: 'Raleway', sans-serif;
+	font-size: large;
+	text-align: center;
+}
+
+}

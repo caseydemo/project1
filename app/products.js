@@ -131,6 +131,7 @@ function ButtonStuff() {
         "Chocolate";
     document.getElementById("total").innerHTML +=
         "$2.00"; 
+    total += 2;
         }
 
   else if(this.classList.contains('vanilla')){
@@ -138,19 +139,22 @@ function ButtonStuff() {
         "Vanilla";
     document.getElementById("total").innerHTML +=
         "$2.00"; 
+    total += 2;
         }
   else if(this.classList.contains('strawberry')){
     document.getElementById("display").innerHTML +=
         "Strawberry";
     document.getElementById("total").innerHTML +=
         "$2.00"; 
+    total += 2;
         }
 
   else if(this.classList.contains('salted-caramel')){
     document.getElementById("display").innerHTML +=
         "Salted Caramel";
     document.getElementById("total").innerHTML +=
-        "$3.00"; 
+        "$3.00";
+    total += 3; 
         }
 
    else if(this.classList.contains('pumpkin-spice')){
@@ -158,38 +162,49 @@ function ButtonStuff() {
         "Pumpkin Spice";
     document.getElementById("total").innerHTML +=
         "$3.00"; 
+    total += 3;
         }
 
     else if(this.classList.contains('waffle-cone')){
     document.getElementById("display").innerHTML +=
         "Waffle Cone";
     document.getElementById("total").innerHTML +=
-        "$1.25"; 
+        "$1.25";
+    total += 1.25; 
         }
     else if(this.classList.contains('hot-fudge')){
     document.getElementById("display").innerHTML +=
         "Hot Fudge";
     document.getElementById("total").innerHTML +=
-        "$1.00"; 
+        "$1.00";
+    total += 1; 
         }
     else if(this.classList.contains('marshmellows')){
     document.getElementById("display").innerHTML +=
         "Marshmellows";
     document.getElementById("total").innerHTML +=
-        "$1.50"; 
+        "$1.50";
+    total += 1.5; 
         }
     else if(this.classList.contains('rainbow-sprinkles')){
     document.getElementById("display").innerHTML +=
         "Rainbow Sprinkles";
     document.getElementById("total").innerHTML +=
-        "$0.75"; 
+        "$0.75";
+    total += 0.75; 
         }
+
+    else if(this.classList.contains('checkout')){
+      calculate();
+    }
 }
 
 
 function calculate(){
   // this function will retrive whatevers in the class "total"  and display the total to the customer
-  document.getElementById("total")
+  
+  // document.getElementById("total").innerHTML("$"+total);
+  alert("$"+total);
 }
 
 
