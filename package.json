@@ -1,0 +1,24 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caseydemo/project1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caseydemo/project1/issues"
+  },
+  "homepage": "https://github.com/caseydemo/project1#readme",
+  "dependencies": {
+    "express": "^4.16.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
