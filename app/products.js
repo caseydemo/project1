@@ -12,7 +12,7 @@
 // var regularFlavorNames = document.getElementById('regular-flavor-names');
 // var regularFlavorDescription = document.getElementById('regular-flavor-description');
 
-var visualSpacer = "*****";
+var visualSpacer = "-----";
 
 
 var products = {
@@ -113,7 +113,7 @@ for(var i=0; i<3; i++){
  document.getElementById("regular-flavor").innerHTML += 
  (products['Regular Flavors'][i]['name']) + 
  " " + (products['Regular Flavors'][i]['description']) + 
- " " + (products['Regular Flavors'][i]['price']);
+ " $" + (products['Regular Flavors'][i]['price']);
   console.log("at line 115 i =" + i);
    console.log("visual spacer is =" + visualSpacer);
   if((i+1)<3){
@@ -131,7 +131,7 @@ for(var i=0; i<2; i++){
  document.getElementById("seasonal-flavor").innerHTML += 
  (products['Seasonal Flavors'][i]['name']) + 
  " " + (products['Seasonal Flavors'][i]['description']) + 
- " " + (products['Seasonal Flavors'][i]['price']);
+ " $" + (products['Seasonal Flavors'][i]['price']);
   if((i+1)<2){
     document.getElementById("seasonal-flavor").innerHTML += visualSpacer;
     } 
@@ -146,10 +146,11 @@ for(var i=0; i<3; i++){
  document.getElementById("toppings").innerHTML += 
  (products['Toppings'][i]['name']) + 
  " " + (products['Toppings'][i]['description']) + 
- " " + (products['Toppings'][i]['price']) +
- " //// ";
-
-    }
+ " $" + (products['Toppings'][i]['price']);
+      if((i+1)<3){
+      document.getElementById("toppings").innerHTML += visualSpacer;
+      } 
+   }
   }
 
 
@@ -160,33 +161,13 @@ for(var i=0; i<2; i++){
  document.getElementById("serving-options").innerHTML += 
  (products['Serving Options'][i]['name']) + 
  " " + (products['Serving Options'][i]['description']) + 
- " " + (products['Serving Options'][i]['price']) +
- " //// ";
-
-    }
+ " $" + (products['Serving Options'][i]['price']);
+  if((i+1)<2){
+      document.getElementById("serving-options").innerHTML += visualSpacer;
+      } 
+   }
   }
-
 }
-// // loop attempt
-// for(var i=0; i<3; i++){
-// document.getElementById("regular-flavor-names").innerHTML += (products['Regular Flavors'][i]['name']) + " ";
-// }
-
-// // loop attempt
-// for(var i=0; i<3; i++){
-// document.getElementById("regular-flavor-description").innerHTML += (products['Regular Flavors'][i]['description']) + " ";
-// }
-
-// // loop attempt
-// for(var i=0; i<3; i++){
-// document.getElementById("regular-flavor-price").innerHTML += (products['Regular Flavors'][i]['price']) + " ";
-// }
-
-
-
-
-
-
 
 
 // // Chocolate
