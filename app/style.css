@@ -10,9 +10,19 @@ h1, h2 {
 	font-family: 'Lobster', cursive;
 }
 .menu-item{
-	text-align: center;
+	margin: 5px 100px 5px;
+  	text-align: center;
 	font-family: 'Acme', sans-serif;
-	/*font-family: 'Lobster', cursive;*/
 	font-family: 'Raleway', sans-serif;
-	font-size: x-large;
+	font-size: large;
+}
+#display{
+	font-family: 'Lobster', cursive;
+	font-size: xx-large;
+	text-align: center;
+}
+#total{
+	font-family: 'Raleway', sans-serif;
+	font-size: large;
+	text-align: center;
 }
