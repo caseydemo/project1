@@ -1,14 +1,16 @@
-var Chocolate = document.getElementById('chocolate');
-var Vanilla = document.getElementById('vanilla');
-var Strawberry = document.getElementById('strawberry');
-var saltedCaramel = document.getElementById('salted-caramel');
-var pumpkinSpice = document.getElementById('pumpkin-spice');
-var Cup = document.getElementById('cup');
-var Cone = document.getElementById('cone');
-var hotFudge = document.getElementById('hot-fudge');
-var Marshmellows = document.getElementById('marshmellows');
-var rainbowSprinkles = document.getElementById('rainbow-sprinkles');
+// var Chocolate = document.getElementById('chocolate');
+// var Vanilla = document.getElementById('vanilla');
+// var Strawberry = document.getElementById('strawberry');
+// var saltedCaramel = document.getElementById('salted-caramel');
+// var pumpkinSpice = document.getElementById('pumpkin-spice');
+// var Cup = document.getElementById('cup');
+// var Cone = document.getElementById('cone');
+// var hotFudge = document.getElementById('hot-fudge');
+// var Marshmellows = document.getElementById('marshmellows');
+// var rainbowSprinkles = document.getElementById('rainbow-sprinkles');
 
+// var regularFlavorNames = document.getElementById('regular-flavor-names');
+// var regularFlavorDescription = document.getElementById('regular-flavor-description');
 
 
 var products = {
@@ -94,10 +96,30 @@ var products = {
 
 // Regular Flavors
 
+// loop attempt
+for(var i=0; i<3; i++){
+document.getElementById("regular-flavor-names").innerHTML += (products['Regular Flavors'][i]['name']) + " ";
+}
+
+// loop attempt
+for(var i=0; i<3; i++){
+document.getElementById("regular-flavor-description").innerHTML += (products['Regular Flavors'][i]['description']) + " ";
+}
+
+// loop attempt
+for(var i=0; i<3; i++){
+document.getElementById("regular-flavor-price").innerHTML += (products['Regular Flavors'][i]['price']) + " ";
+}
+
+
+
+
 // Chocolate
 document.getElementById("chocolate").innerHTML += (products['Regular Flavors'][0]['name']) + " ";
 document.getElementById("chocolate").innerHTML += (products['Regular Flavors'][0]['description']) + " $";
 document.getElementById("chocolate").innerHTML +=  products['Regular Flavors'][0]['price'];
+
+
 
 
 // Vanilla
