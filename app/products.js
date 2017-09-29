@@ -11,7 +11,7 @@
 
 // var regularFlavorNames = document.getElementById('regular-flavor-names');
 // var regularFlavorDescription = document.getElementById('regular-flavor-description');
-
+var buttons = document.getElementsByClassName('button');
 var visualSpacer = "-----";
 
 
@@ -99,12 +99,33 @@ var products = {
 // Regular Flavors
 
 document.onreadystatechange = function() {
+
+  // WHEN DOCUMENT IS LOADED AND INTERACTIVE - START YO STUFF
   if (document.readyState === "interactive") {
+    
+    // BUILD MENU 
     buildMenuRegular();
     buildMenuSeasonal();
     buildMenuToppings();
     buildMenuServingOptions();
+
+    // ADD EVENT LISTENERS TO ALL BUTTONS
+    for (i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", ButtonStuff);
+    }
+    
     };
+
+function ButtonStuff() {
+  // this function will handle button functionality
+  
+
+  var buttonLabel = this.innerHTML;
+  if (this.classList.contains('chocolate')) {
+    alert(products['Regular Flavors'][0]['name']+ " was your selection");
+    alert("$"+(products['Regular Flavors'][0]['price']) + "is the price");
+  }
+}
 
 function buildMenuRegular(){
 
@@ -168,6 +189,9 @@ for(var i=0; i<2; i++){
    }
   }
 }
+
+
+
 
 
 // // Chocolate
