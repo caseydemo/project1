@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<img id="clip-art1" src="../docs/strawberry.jpg">
+	<img id="clip-art2" src="../docs/strawberry.jpg">
 	<title>Pizza-Town Ice-Cream</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -16,7 +18,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		
 		<!-- google fonts link -->
-		<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 		
 		<!-- Local stylesheet *** located within the app folder ***-->
 		<link rel="stylesheet" href="style.css">
@@ -53,6 +55,7 @@
 		<!-- TOPPINGS		 -->
 			<!-- MENU ITEMS imported from products.js and printed to the document.innerHTML here -->
 			<h2>Toppings</h2>
+
 			<button class="button hot-fudge">Hot Fudge</button>
 			<button class="button marshmellows">Marshmellows</button>
 			<button class="button rainbow-sprinkles">Rainbow Sprinkles</button>
@@ -63,11 +66,23 @@
 		</div> 
 	
 	</div>
+	<div id="display"></div>
+		<br>
+		<br>
+		<br>
+		<br>
 	
 	    <!-- TOTAL -->
-	    <div id="display"></div>
-	    <div id="total"></div>
-		<button class="button checkout">checkout</button> 
+	    
+	    <div id="total btn-default"></div>
+	    
+		<button class="button checkout btn btn-default btn-lg">checkout</button> 
+		<br>
+		<button class="button clear-all">clear</button>
+		<br>
+		<br>
+		<br>
+
 		   
 	    
 	

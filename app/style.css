@@ -1,36 +1,69 @@
-body{
-	background:#9baec8;
-	/*font-family: 'Lobster', cursive;
-	font-family: 'Raleway', sans-serif;*/
+body {
+    background-color: #4F86C6;
+    
 }
 
 h1, h2 {
+	background-color: #4FB0C6;
+	margin-left: 1px;
+	margin-left: 1px;
 	text-align: center;
 	padding-top: 10px;
-	font-family: 'Lobster', cursive;
+	font-family: 'Indie Flower', cursive;
+	font-weight: bold;
 }
 .menu-item{
+	display: block;
 	margin: 5px 100px 5px;
   	text-align: center;
-	font-family: 'Acme', sans-serif;
-	font-family: 'Raleway', sans-serif;
-	font-size: large;
+	font-family: 'Indie Flower', cursive;
+	font-size: x-large;
+	background-color: #4FB0C6;
 }
 #display{
-	font-family: 'Lobster', cursive;
+	font-family: 'Indie Flower', cursive;
 	font-size: xx-large;
+	font-weight: bolder;
 	text-align: center;
+	color:white;
 }
 #total{
-	font-family: 'Raleway', sans-serif;
-	font-size: large;
+	font-family: 'Indie Flower', cursive;
+	font-size: x-small;
 	text-align: center;
 }
 .checkout{
 	
 	margin: auto;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Indie Flower', cursive;
+	font-size: xx-large;
 	display: block;
-    width: 40%
+    width: 40%;
+
 }
 
+.clear-all{
+	margin:auto;
+	font-family: 'Indie Flower', cursive;
+	font-size: large;
+	font-weight: bold;
+	display: block;
+	padding: 5px 10px;
+}
+.button{
+	background-color:#6C49B8 ;
+	color: #4FB0C6;
+	font-weight: bold;
+}
+#clip-art1{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+    left: 0px;
+}
+#clip-art2{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+    right: 0px;
+}
