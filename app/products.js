@@ -1,16 +1,4 @@
-// var Chocolate = document.getElementById('chocolate');
-// var Vanilla = document.getElementById('vanilla');
-// var Strawberry = document.getElementById('strawberry');
-// var saltedCaramel = document.getElementById('salted-caramel');
-// var pumpkinSpice = document.getElementById('pumpkin-spice');
-// var Cup = document.getElementById('cup');
-// var Cone = document.getElementById('cone');
-// var hotFudge = document.getElementById('hot-fudge');
-// var Marshmellows = document.getElementById('marshmellows');
-// var rainbowSprinkles = document.getElementById('rainbow-sprinkles');
 
-// var regularFlavorNames = document.getElementById('regular-flavor-names');
-// var regularFlavorDescription = document.getElementById('regular-flavor-description');
 var buttons = document.getElementsByClassName('button');
 var visualSpacer = ")--------(";
 var total = 0;
@@ -300,75 +288,6 @@ for(var i=0; i<2; i++){
    }
   }
 }
-
-
-
-
-
-// // Chocolate
-// document.getElementById("chocolate").innerHTML += (products['Regular Flavors'][0]['name']) + " ";
-// document.getElementById("chocolate").innerHTML += (products['Regular Flavors'][0]['description']) + " $";
-// document.getElementById("chocolate").innerHTML +=  products['Regular Flavors'][0]['price'];
-
-
-
-
-// // Vanilla
-// document.getElementById("vanilla").innerHTML += (products['Regular Flavors'][1]['name']) + " ";
-// document.getElementById("vanilla").innerHTML += (products['Regular Flavors'][1]['description']) + " $";
-// document.getElementById("vanilla").innerHTML +=  products['Regular Flavors'][1]['price'];
-
-
-// // Strawberry
-// document.getElementById("strawberry").innerHTML += (products['Regular Flavors'][2]['name']) + " ";
-// document.getElementById("strawberry").innerHTML += (products['Regular Flavors'][2]['description']) + " $";
-// document.getElementById("strawberry").innerHTML +=  products['Regular Flavors'][2]['price'];
-
-
-// // Seasonal Flavors
-
-// // Salted Caramel
-// document.getElementById("salted-caramel").innerHTML += (products['Seasonal Flavors'][0]['name']) + " ";
-// document.getElementById("salted-caramel").innerHTML += (products['Seasonal Flavors'][0]['description']) + " $";
-// document.getElementById("salted-caramel").innerHTML +=  products['Seasonal Flavors'][0]['price'];
-
-// // Pumpkin Spice
-// document.getElementById("pumpkin-spice").innerHTML += (products['Seasonal Flavors'][1]['name']) + " ";
-// document.getElementById("pumpkin-spice").innerHTML += (products['Seasonal Flavors'][1]['description']) + " $";
-// document.getElementById("pumpkin-spice").innerHTML +=  products['Seasonal Flavors'][1]['price'];
-
-
-// // Serving Options
-
-// // Cup
-// document.getElementById("cup").innerHTML += (products['Serving Options'][0]['name']) + " ";
-// document.getElementById("cup").innerHTML += (products['Serving Options'][0]['description']) + " $";
-// document.getElementById("cup").innerHTML +=  products['Serving Options'][0]['price'];
-
-// // Cone
-// document.getElementById("cone").innerHTML += (products['Serving Options'][1]['name']) + " ";
-// document.getElementById("cone").innerHTML += (products['Serving Options'][1]['description']) + " $";
-// document.getElementById("cone").innerHTML +=  products['Serving Options'][1]['price'];
-
-
-
-// // Toppings
-
-// // Hot Fudge
-// document.getElementById("hot-fudge").innerHTML += (products['Toppings'][0]['name']) + " ";
-// document.getElementById("hot-fudge").innerHTML += (products['Toppings'][0]['description']) + " $";
-// document.getElementById("hot-fudge").innerHTML +=  products['Toppings'][0]['price'];
-
-// // Marshmellows
-// document.getElementById("marshmellows").innerHTML += (products['Toppings'][1]['name']) + " ";
-// document.getElementById("marshmellows").innerHTML += (products['Toppings'][1]['description']) + " $";
-// document.getElementById("marshmellows").innerHTML +=  products['Toppings'][1]['price'];
-
-// // Rainbow Sprinkles
-// document.getElementById("rainbow-sprinkles").innerHTML += (products['Toppings'][2]['name']) + " ";
-// document.getElementById("rainbow-sprinkles").innerHTML += (products['Toppings'][2]['description']) + " $";
-// document.getElementById("rainbow-sprinkles").innerHTML +=  products['Toppings'][2]['price'];
-
 
 
 
